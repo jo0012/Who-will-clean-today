@@ -1,0 +1,15 @@
+﻿<Window x:Class="whoWillCleanToday.AddStudent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:whoWillCleanToday"
+        mc:Ignorable="d"
+        Title="AddStudent" Height="250" Width="400" ResizeMode="NoResize" WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown" Loaded="Window_Loaded">
+    <Grid Width="400" Height="250">
+        <TextBox x:Name="textBox_newStudentsName" TextWrapping="Wrap" Text="" Height="31" Margin="167,70,10,0" VerticalAlignment="Top" FontFamily="NanumGothic"/>
+        <Button x:Name="Button_OK" Content="확인" HorizontalAlignment="Left" Margin="19,125,0,0" VerticalAlignment="Top" Click="Button_OK_Click" Width="181" Height="71" Background="White" BorderBrush="#FFE8F5FF"/>
+        <Button x:Name="Button_Cancel" Content="취소" HorizontalAlignment="Left" Margin="209,125,0,0" VerticalAlignment="Top" Click="Button_Cancel_Click" Width="181" Height="71" Background="White" BorderBrush="#FFE8F5FF"/>
+        <Label Content="추가할 학생의 이름 : " Margin="15,71,233,149" RenderTransformOrigin="0.836,0.472" FontFamily="NanumGothic" FontSize="16"/>
+    </Grid>
+</Window>

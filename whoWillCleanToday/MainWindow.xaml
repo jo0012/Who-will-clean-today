@@ -1,0 +1,31 @@
+﻿<Window x:Class="whoWillCleanToday.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:whoWillCleanToday"
+        mc:Ignorable="d"
+        Title="Who will clean today?" Height="500" Width="892" Background="White" MinWidth="1000" MinHeight="600" WindowStyle="None" AllowsTransparency="True" MouseLeftButtonDown="Window_MouseLeftButtonDown" ResizeMode="NoResize" Loaded="Window_Loaded">
+    <Grid Height="600" Width="1000" MinWidth="1000" MinHeight="600">
+        <Button x:Name="button_exit" Content="X" Margin="958,10,10,558" Width="32" Height="32" BorderBrush="White" FontFamily="Arial" FontWeight="Bold" FontSize="20" Foreground="#FFC8C8C8" MinWidth="32" MinHeight="32" MaxWidth="32" MaxHeight="32" Click="button_exit_Click" HorizontalAlignment="Right">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <ListBox x:Name="ListBox_studentList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="173,95,628,385" FontFamily="NanumGothic" BorderBrush="#FFDEE6FF" Foreground="#FF434343"/>
+        <ListBox x:Name="ListBox_exceptionList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="173,326,628,154" FontFamily="NanumGothic" BorderBrush="#FFDEE6FF" Foreground="#FF434343"/>
+        <Label x:Name="Label_studentList" Content="전체 학생 목록" Margin="199,54,0,510" FontFamily="NanumGothic" FontSize="22" FontWeight="DemiBold" HorizontalAlignment="Left" Foreground="#FF323232"/>
+        <Label x:Name="Label_studentList_Copy" Content="청소 면제자 목록" Margin="189,285,0,279" FontFamily="NanumGothic" FontSize="22" FontWeight="DemiBold" HorizontalAlignment="Left" Foreground="#FF323232"/>
+        <Canvas Margin="0,0,839,0" Background="#FFF4F4F4"/>
+        <Button x:Name="Button_AddStudent" Content="추가" Margin="173,224,728,326" BorderBrush="#FFE4E4E4" Click="Button_AddStudent_Click" Background="{x:Null}" FontFamily="NanumGothic" Cursor="Hand"/>
+        <Button x:Name="Button_RemoveStudent" Content="삭제" Margin="277,224,628,326" BorderBrush="#FFE4E4E4" Background="{x:Null}" Click="Button_RemoveStudent_Click" FontFamily="NanumGothic" Cursor="Hand"/>
+        <Button x:Name="Button_AddException" Content="추가" Margin="173,451,728,99" BorderBrush="#FFE4E4E4" Click="Button_AddException_Click" Background="{x:Null}" FontFamily="NanumGothic" Cursor="Hand"/>
+        <Button x:Name="Button_RemoveException" Content="삭제" Margin="277,451,628,99" BorderBrush="#FFE4E4E4" Background="{x:Null}" Click="Button_RemoveException_Click" FontFamily="NanumGothic" Cursor="Hand"/>
+        <Label x:Name="Label_studentNumber" Content= "전체 학생 수 : " Margin="173,507,628,62" FontFamily="NanumGothic" Foreground="#FF323232"/>
+        <Label x:Name="Label_exceptionNumber" Content= "청소 면제자 수 : " Margin="173,533,628,35" FontFamily="NanumGothic" Foreground="#FF323232"/>
+        <Button x:Name="Button_Launch" Content="시작" Margin="377,506,10,30" BorderBrush="#FFE4E4E4" Click="Button_Launch_Click" Background="{x:Null}" FontFamily="NanumGothic" Cursor="Hand" FontSize="24" FontWeight="Bold" Foreground="#FF484848"/>
+        <ListBox x:Name="ListBox_todaysCleaners" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="377,95,10,99" FontFamily="NanumGothic" BorderBrush="#FFDEE6FF" Foreground="#FF464646" FontSize="48" FontWeight="SemiBold"/>
+        <Label x:Name="Label_todaysCleaners" Content="오늘의 청소 당번" Margin="0,47,200,510" FontFamily="NanumGothic" FontSize="30" FontWeight="Bold" HorizontalAlignment="Right" Foreground="#FF323232" Width="232" Cursor=""/>
+        <Label x:Name="Label_exceptionNumber_Copy" Content= "Github: https://github.com/jo0012" Margin="633,570,10,4" HorizontalAlignment="Right" FontFamily="NanumGothic" FontSize="12"/>
+    </Grid>
+</Window>
